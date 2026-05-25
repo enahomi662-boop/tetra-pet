@@ -6,13 +6,9 @@
   <title>TETRA-PET — Comunidad que Avanza</title>
   <meta name="description" content="Proyecto comunitario de reciclaje de PET y Tetra Pak.">
 
-  <!-- NUEVAS FUENTES: Más modernas, limpias y con peso -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ==========================================
-       RESET Y BASE
-    ========================================== */
     * {
       margin: 0;
       padding: 0;
@@ -45,9 +41,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* ==========================================
-       BARRA DE NAVEGACIÓN (EXACTA A LA IMAGEN)
-    ========================================== */
     .navbar {
       background-color: var(--color-medio);
       padding: 15px 40px;
@@ -58,6 +51,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      flex-wrap: wrap;
     }
 
     .logo {
@@ -68,7 +62,6 @@
       color: var(--color-texto);
     }
 
-    /* LOGO PERSONALIZADO: TRIÁNGULO + RECICLAJE (SIN FUEGO) */
     .logo-icono {
       width: 42px;
       height: 42px;
@@ -124,6 +117,8 @@
       display: flex;
       list-style: none;
       gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .menu a {
@@ -157,9 +152,6 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     }
 
-    /* ==========================================
-       SECCIONES / CONTENIDO
-    ========================================== */
     .contenido {
       display: none;
       padding: 60px 40px;
@@ -176,7 +168,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* HERO / INICIO (EXACTO A TU IMAGEN) */
     .hero {
       display: grid;
       grid-template-columns: 1fr 320px;
@@ -236,6 +227,7 @@
     .hero-datos {
       display: flex;
       gap: 40px;
+      flex-wrap: wrap;
     }
 
     .dato h3 {
@@ -265,9 +257,6 @@
       color: #44c974;
     }
 
-    /* ==========================================
-       ¿QUÉ HACEMOS?
-    ========================================== */
     .seccion-titulo {
       text-align: center;
       font-size: 2.4rem;
@@ -312,10 +301,6 @@
       margin-bottom: 10px;
     }
 
-    /* ==========================================
-       GALERÍA (REDiseñADA, MÁS CREATIVA)
-    ========================================== */
-    /* AQUÍ CAMBIÉ TAMAÑO, FORMA Y DISEÑO COMPLETAMENTE */
     .galeria-contenedor {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -334,7 +319,6 @@
       border: 3px solid rgba(255,255,255,0.4);
     }
 
-    /* DIFERENTES FORMAS Y TAMAÑOS */
     .galeria-tarjeta:nth-child(odd) { border-radius: 40px 10px; }
     .galeria-tarjeta:nth-child(even) { border-radius: 10px 40px; }
     .galeria-tarjeta:nth-child(3n) { grid-row: span 2; height: 100%; }
@@ -375,13 +359,10 @@
       margin-bottom: 4px;
     }
     .galeria-overlay p {
-      font-size: 0.75rem;
+      fontSize: 0.75rem;
       opacity: 0.8;
     }
 
-    /* ==========================================
-       CONTACTO
-    ========================================== */
     .formulario {
       max-width: 600px;
       margin: 0 auto;
@@ -413,9 +394,6 @@
       font-size: 1rem;
     }
 
-    /* ==========================================
-       FOOTER
-    ========================================== */
     footer {
       text-align: center;
       padding: 30px;
@@ -427,7 +405,6 @@
 </head>
 <body>
 
-  <!-- NAVEGACIÓN - IGUAL A LA IMAGEN -->
   <nav class="navbar">
     <a href="#inicio" class="logo">
       <div class="logo-icono">
@@ -451,10 +428,7 @@
     <button class="btn-participar" onclick="cambiarSeccion('contacto')">♻️ Participar</button>
   </nav>
 
-  <!-- CONTENEDOR PRINCIPAL -->
   <main>
-
-    <!-- INICIO / HERO -->
     <section id="inicio" class="contenido activo">
       <div class="hero">
         <div class="hero-texto">
@@ -490,7 +464,6 @@
       </div>
     </section>
 
-    <!-- ¿QUÉ HACEMOS? -->
     <section id="quehacemos" class="contenido">
       <h2 class="seccion-titulo">¿QUÉ HACEMOS?</h2>
       <div class="grid-3">
@@ -512,69 +485,68 @@
       </div>
     </section>
 
-    <!-- GALERÍA - NUEVO DISEÑO CREATIVO -->
-    <section id="galeria" class="contenido">
-      <h2 class="seccion-titulo">GALERÍA DE ACTIVIDADES</h2>
-      <div class="galeria-contenedor">
+    <!-- GALERÍA DE ACTIVIDADES -->
+<section id="galeria" class="contenido">
+  <h2 class="seccion-titulo">GALERÍA DE ACTIVIDADES</h2>
+  <div class="galeria-contenedor">
 
-        <!-- Tarjeta 1 -->
-        <div class="galeria-tarjeta">
-          <img src="d:\html\jornada_de_limpieza.jpg" alt="Recolección por estudiantes">
-          <div class="galeria-overlay">
-            <h4>Jornada de limpieza</h4>
-            <p>Colegio  • Abril 2026</p>
-          </div>
-        </div>
-
-        <!-- Tarjeta 2 -->
-        <div class="galeria-tarjeta">
-          <img src="d:\html\programa_escolar.jpg" alt="Reciclaje escolar">
-          <div class="galeria-overlay">
-            <h4>Programa escolar</h4>
-            <p>Escuela Cecyte • Recolección masiva</p>
-          </div>
-        </div>
-
-        <!-- Tarjeta 3 (más grande) -->
-        <div class="galeria-tarjeta">
-          <img src="d:\html\equipo_de_voluntarios.jpg" alt="Voluntarios trabajando">
-          <div class="galeria-overlay">
-            <h4>Equipo de voluntarios</h4>
-            <p>Unidos por el planeta • Más de 50 personas</p>
-          </div>
-        </div>
-
-        <!-- Tarjeta 4 (ancha) -->
-        <div class="galeria-tarjeta">
-          <img src="d:\html\mas_personas_se_unen.jpg" alt="Punto de acopio">
-          <div class="galeria-overlay">
-            <h4>Mas personas se unen</h4>
-            <p>El Fortin Alto • Agencia, cancha</p>
-          </div>
-        </div>
-
-        <!-- Tarjeta 5 -->
-        <div class="galeria-tarjeta">
-          <img src="d:\html\charlas_comunitarias.jpg" alt="Charla informativa">
-          <div class="galeria-overlay">
-            <h4>Charlas comunitarias</h4>
-            <p>Enseñando a reciclar correctamente</p>
-          </div>
-        </div>
-
-        <!-- Tarjeta 6 -->
-        <div class="galeria-tarjeta">
-          <img src="d:\html\material_recolectado.jpg" alt="Material recolectado">
-          <div class="galeria-overlay">
-            <h4>Material recolectado</h4>
-            <p>Resultados mensuales • +500kg</p>
-          </div>
-        </div>
-
+    <!-- 📸 FOTO 1 -->
+    <div class="galeria-tarjeta">
+      <img src="jornada_de_limpieza.jpg" alt="Recolección por estudiantes"> 
+      <div class="galeria-overlay">
+        <h4>Jornada de limpieza</h4>
+        <p>Colegio • Abril 2026</p>
       </div>
-    </section>
+    </div>
 
-    <!-- CONTACTO -->
+    <!-- 📸 FOTO 2 -->
+    <div class="galeria-tarjeta">
+      <img src="programa_escolar.jpg" alt="Reciclaje escolar"> 
+      <div class="galeria-overlay">
+        <h4>Programa escolar</h4>
+        <p>Escuela Cecyte • Recolección masiva</p>
+      </div>
+    </div>
+
+    <!-- 📸 FOTO 3 -->
+    <div class="galeria-tarjeta">
+      <img src="equipo_de_voluntarios.jpg" alt="Voluntarios trabajando"> 
+      <div class="galeria-overlay">
+        <h4>Equipo de voluntarios</h4>
+        <p>Unidos por el planeta • Más de 50 personas</p>
+      </div>
+    </div>
+
+    <!-- 📸 FOTO 4 -->
+    <div class="galeria-tarjeta">
+      <img src="mas_personas_se_unen.jpg" alt="Mas personas se involucran"> 
+      <div class="galeria-overlay">
+        <h4>Estuiantes; maestros</h4>
+        <p>El Fortin Alto • cancha</p>
+      </div>
+    </div>
+
+    <!-- 📸 FOTO 5 -->
+    <div class="galeria-tarjeta">
+      <img src="charlas_comunitarias.jpg" alt="Charla informativa"> 
+      <div class="galeria-overlay">
+        <h4>Charlas comunitarias</h4>
+        <p>Enseñando a reciclar correctamente</p>
+      </div>
+    </div>
+
+    <!-- 📸 FOTO 6 -->
+    <div class="galeria-tarjeta">
+      <img src="material_recolectado.jpg" alt="Material recolectado">
+      <div class="galeria-overlay">
+        <h4>Material recolectado</h4>
+        <p>Resultados mensuales • +500kg</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
     <section id="contacto" class="contenido">
       <h2 class="seccion-titulo">CONTACTO</h2>
       <div class="grid-3" style="margin-bottom: 50px;">
@@ -618,28 +590,19 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>♻️ © 2026 TETRA-PET — COMUNIDAD QUE AVANZA | Todos los derechos reservados</p>
   </footer>
 
-  <!-- SCRIPTS -->
   <script>
-    // Cambiar entre secciones
     function cambiarSeccion(id, enlace = null) {
-      // Ocultar todo
       document.querySelectorAll('.contenido').forEach(s => s.classList.remove('activo'));
-      // Desactivar menú
       document.querySelectorAll('.menu a').forEach(a => a.classList.remove('activo'));
-      // Mostrar actual
       document.getElementById(id).classList.add('activo');
-      // Activar enlace
       if(enlace) enlace.classList.add('activo');
-      // Ir arriba
       window.scrollTo(0,0);
     }
 
-    // Modo oscuro
     function modoOscuro() {
       document.body.classList.toggle('oscuro');
       if(document.body.classList.contains('oscuro')) {
